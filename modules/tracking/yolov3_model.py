@@ -302,7 +302,7 @@ def preprocess_input(image, net_h, net_w):
     return new_image
 
 
-def decode_netout(netout, anchors, obj_thresh, nms_thresh, net_h, net_w):
+def decode_netout(netout, anchors, obj_thresh, net_h, net_w):
     grid_h, grid_w = netout.shape[:2]
     nb_box = 3
     netout = netout.reshape((grid_h, grid_w, nb_box, -1))
