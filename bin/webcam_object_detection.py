@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+
 import cv2
 from keras.models import load_model
-from yolo3.preprocessing import process_image
-from yolo3.postprocessing import decode_netout, correct_yolo_boxes, do_nms, get_boxes
-from yolo3.output import draw_boxes
-from inputs import webcam
+from objdetect.yolo.preprocessing import process_image
+from objdetect.yolo.postprocessing import decode_netout, correct_yolo_boxes, do_nms, get_boxes
+from objdetect.yolo.output import draw_boxes
+from objdetect.input import webcam
 import argparse
 
 parser = argparse.ArgumentParser(description='Process some integers.')
