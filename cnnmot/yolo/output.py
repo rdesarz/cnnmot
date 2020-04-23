@@ -4,7 +4,7 @@ from matplotlib.patches import Rectangle
 
 def draw_boxes(frame, v_boxes, v_labels, v_scores):
     pyplot.figure()
-    # plot the image
+    # show original image
     pyplot.imshow(frame)
     # get the context for drawing boxes
     ax = pyplot.gca()

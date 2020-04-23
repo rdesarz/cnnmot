@@ -1,4 +1,3 @@
-import argparse
 import os
 import numpy as np
 from keras.layers import Conv2D, Input, BatchNormalization, LeakyReLU, ZeroPadding2D, UpSampling2D
@@ -8,14 +7,6 @@ import struct
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
-argparser = argparse.ArgumentParser(
-    description='test yolov3 network with coco weights')
-
-argparser.add_argument(
-    '-w',
-    '--weights',
-    help='path to weights file')
 
 
 class WeightReader:

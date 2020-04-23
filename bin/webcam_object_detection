@@ -2,10 +2,10 @@
 
 import cv2
 from keras.models import load_model
-from objdetect.yolo.preprocessing import process_image
-from objdetect.yolo.postprocessing import decode_netout, correct_yolo_boxes, do_nms, get_boxes
-from objdetect.yolo.output import draw_boxes
-from objdetect.input import webcam
+from cnnmot.yolo.preprocessing import process_image
+from cnnmot.yolo.postprocessing import decode_netout, correct_yolo_boxes, do_nms, get_boxes
+from cnnmot.yolo.output import draw_boxes
+from cnnmot.input import webcam
 import argparse
 
 parser = argparse.ArgumentParser(description='Process some integers.')
