@@ -218,3 +218,13 @@ def make_yolov3_model():
 
     model = Model(input_image, [yolo_82, yolo_94, yolo_106])
     return model
+
+
+def get_keras_model_from_weight(weight_file):
+    model = make_yolov3_model()
+    # load the model weights
+    weight_reader = WeightReader(weight_file)
+    # set the model weights into the model
+    weight_reader.load_weights(model)
+
+    return model
