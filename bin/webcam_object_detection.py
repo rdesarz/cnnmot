@@ -2,7 +2,7 @@
 
 import cv2
 from keras.models import load_model
-from cnnmot.yolo.preprocessing import process_image
+from cnnmot.yolo.preprocessing import process_array_image
 from cnnmot.yolo.postprocessing import decode_netout, correct_yolo_boxes, do_nms, get_boxes
 from cnnmot.yolo.output import draw_boxes
 from cnnmot.input import webcam
@@ -33,7 +33,7 @@ def main():
     anchors = [[116, 90, 156, 198, 373, 326], [30, 61, 62, 45, 59, 119], [10, 13, 16, 30, 33, 23]]
     frame = webcam.get_frame()
     # preprocess image to input it in the network
-    image, image_w, image_h = process_image(frame, input_shape)
+    image, image_w, image_h = process_array_image(frame, input_shape)
     # make prediction
     yhat = model.predict(image)
     boxes = list()
