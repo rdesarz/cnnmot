@@ -4,8 +4,12 @@ from PIL import Image
 
 
 # Prepare an image as an input for the network
-def process_image(raw_image, shape):
-    image = Image.fromarray(raw_image, 'RGB')
+def process_array_image(arr_image, shape):
+    image = Image.fromarray(arr_image, 'RGB')
+    return process_pil_image(image, shape)
+
+
+def process_pil_image(image, shape):
     # save the original image shape
     width, height = image.size
     # reshape the image with the required size
