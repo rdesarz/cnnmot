@@ -9,15 +9,15 @@ part of this [tutorial](https://machinelearningmastery.com/how-to-perform-object
 The project is written in Python (v3.6). You can install it using `pip`.
 
 ```bash
-    pip3 install git+https://github.com/rdesarz/cnnmot.git
+pip3 install git+https://github.com/rdesarz/cnnmot.git
 ```
 
 ### Keras model generation 
 This project is using Keras however the and so the model needs to be translated to a Keras model before using any of the scripts. Run the following instructions in the root folder of the repo. 
 It will download the model and translate it.
 ```bash
-    wget  https://pjreddie.com/media/files/yolov3.weights
-    ./bin/generate_keras_model.py --weights yolov3.weights --model_name yolov3.h5
+wget  https://pjreddie.com/media/files/yolov3.weights
+./bin/generate_keras_model.py --weights yolov3.weights --model_name yolov3.h5
 ```
 
 ## Usage
