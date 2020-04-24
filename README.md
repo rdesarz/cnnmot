@@ -21,7 +21,18 @@ wget  https://pjreddie.com/media/files/yolov3.weights
 ```
 
 ## Usage
+### Jupyter notebook
 To get a demo of the detection, a Jupyter notebook `yolov3_object_detection_colab_example` located in the notebook folder of the project is available. 
+
+## Object detection 
+**Using webcam**
+```bash
+./bin/webcam_object_detection.py --model yolov3.h5
+```
+**Using image file**
+```bash
+./bin/image_file_object_detection.py --model yolov3.h5 -- image example.jpg
+```
 
 ## License
 

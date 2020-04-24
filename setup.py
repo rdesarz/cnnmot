@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/rdesarz/cnnmot",
     packages=setuptools.find_packages(),
-    scripts=['bin/webcam_object_detection.py'],
+    scripts=['bin/webcam_object_detection.py', 'bin/image_file_object_detection.py', 'bin/generate_keras_model.py'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
